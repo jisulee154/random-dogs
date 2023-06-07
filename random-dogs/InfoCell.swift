@@ -9,9 +9,10 @@ import UIKit
 
 class InfoCell:UITableViewCell {
     @IBOutlet var id: UILabel!
-    @IBOutlet var breed: UILabel!
-    @IBOutlet var date: UILabel!
-    @IBOutlet var none: UILabel!
-    @IBOutlet var thumbnail: UIImageView!
+    @IBOutlet var url: UILabel!
+    @IBOutlet var height: UILabel!
+    @IBOutlet var width: UILabel!
+    
+    @IBOutlet var thumbnailView: UIImageView!
     
 }
