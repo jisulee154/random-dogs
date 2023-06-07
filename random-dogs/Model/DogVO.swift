@@ -6,13 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 class DogVO {
-    var thumbnail: String?
+    //var thumbnail: String?
     var id: String?
-    var breed: String?
-    var date: String?
-    var none: String?
+    var url: String?
+    var height: Int?
+    var width: Int?
+    
+    var thumbnailName: String?
+    var thumbnailImage: UIImage?
+    
     //var rating: Double?
     //var thumbnail: String?
     
