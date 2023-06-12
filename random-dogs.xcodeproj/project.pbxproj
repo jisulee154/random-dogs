@@ -15,7 +15,7 @@
 		419D8AB02A221C7F00B087B9 /* random_dogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8AAF2A221C7F00B087B9 /* random_dogsTests.swift */; };
 		419D8ABA2A221C7F00B087B9 /* random_dogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8AB92A221C7F00B087B9 /* random_dogsUITests.swift */; };
 		419D8ABC2A221C7F00B087B9 /* random_dogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8ABB2A221C7F00B087B9 /* random_dogsUITestsLaunchTests.swift */; };
-		419D8AC92A222D6300B087B9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8AC82A222D6300B087B9 /* ListViewController.swift */; };
+		419D8AC92A222D6300B087B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8AC82A222D6300B087B9 /* ViewController.swift */; };
 		41AED7E62A3064BD0047AAB5 /* DogDataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AED7E52A3064BD0047AAB5 /* DogDataArray.swift */; };
 		41AED7E82A306C8A0047AAB5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41AED7E72A306C8A0047AAB5 /* Keys.plist */; };
 		41B737432A222DF40045AAD8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41B737422A222DF40045AAD8 /* Alamofire */; };
@@ -56,7 +56,7 @@
 		419D8AB52A221C7F00B087B9 /* random-dogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "random-dogsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419D8AB92A221C7F00B087B9 /* random_dogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_dogsUITests.swift; sourceTree = "<group>"; };
 		419D8ABB2A221C7F00B087B9 /* random_dogsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_dogsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		419D8AC82A222D6300B087B9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		419D8AC82A222D6300B087B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41AED7E52A3064BD0047AAB5 /* DogDataArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataArray.swift; sourceTree = "<group>"; };
 		41AED7E72A306C8A0047AAB5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		41B737442A222E1E0045AAD8 /* DogVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogVO.swift; sourceTree = "<group>"; };
@@ -120,12 +120,12 @@
 				419D8A9A2A221C7E00B087B9 /* SceneDelegate.swift */,
 				41AED7E42A30646B0047AAB5 /* Control */,
 				41AED7E32A3064640047AAB5 /* View */,
-				41B737462A222EFC0045AAD8 /* InfoCell.swift */,
 				41AED7E22A30644C0047AAB5 /* Model */,
 				419D8AA12A221C7E00B087B9 /* Assets.xcassets */,
 				419D8AA32A221C7E00B087B9 /* LaunchScreen.storyboard */,
 				419D8AA62A221C7E00B087B9 /* Info.plist */,
 				41AED7E72A306C8A0047AAB5 /* Keys.plist */,
+				41B737462A222EFC0045AAD8 /* InfoCell.swift */,
 			);
 			path = "random-dogs";
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 		41AED7E42A30646B0047AAB5 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				419D8AC82A222D6300B087B9 /* ListViewController.swift */,
+				419D8AC82A222D6300B087B9 /* ViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419D8A992A221C7E00B087B9 /* AppDelegate.swift in Sources */,
-				419D8AC92A222D6300B087B9 /* ListViewController.swift in Sources */,
+				419D8AC92A222D6300B087B9 /* ViewController.swift in Sources */,
 				41AED7E62A3064BD0047AAB5 /* DogDataArray.swift in Sources */,
 				419D8A9B2A221C7E00B087B9 /* SceneDelegate.swift in Sources */,
 				41B737452A222E1E0045AAD8 /* DogVO.swift in Sources */,
