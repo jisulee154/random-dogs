@@ -11,7 +11,6 @@ import Alamofire
 class ViewController: UIViewController {
     
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-    
     private var apiKey: String {
         get {
             guard let filepath = Bundle.main.path(forResource: "Keys", ofType: "plist") else {
@@ -20,11 +19,12 @@ class ViewController: UIViewController {
             let plist = NSDictionary(contentsOfFile: filepath)
             guard let value = plist?.object(forKey: "API_KEY") as? String else {
                 fatalError("Couldn't find key 'API_KEY' in 'Keys.plist'.")
-
+                
             }
             return value
         }
     }
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,35 +33,64 @@ class ViewController: UIViewController {
     }
     
     func getADog(){
-        let url = "https://api.thedogapi.com/v1/images/search&limit=2"
-//        let apiKey = getApiKey()
+        let url = "https://api.thedogapi.com/v1/images/search"
+        //        let apiKey = getApiKey()
         
         let headers = ["x-api-key" : apiKey]
         let httpHeaders: HTTPHeaders = HTTPHeaders(headers)
         
         AF.request(url, method: .get, parameters: nil, headers: httpHeaders)
             .responseJSON{ response in
-            switch response.result {
-            case .success:
-                print(".success")
-                if let JSON = response.value {
-                    do {
-                        let dataJson = try JSONSerialization.data(withJSONObject: JSON, options: [])
-                        let getInstanceData = try JSONDecoder().decode([DogData].self, from: dataJson)
-                        print(getInstanceData)
-                        //completion(.success(getInstanceData))
-                        
-                    } catch {
-                        print(error)
+                switch response.result {
+                case .success:
+                    print(".success")
+                    if let JSON = response.value {
+                        do {
+                            let dataJson = try JSONSerialization.data(withJSONObject: JSON, options: [])
+                            let getInstanceData = try JSONDecoder().decode([DogData].self, from: dataJson)
+                            print(getInstanceData)
+                            let dogData = getInstanceData[0]
+                            
+                            self.getDogImage(with: dogData.url)
+                        } catch {
+                            print(error)
+                        }
                     }
+                case .failure(_):
+                    break
                 }
-            case .failure(_):
-                break
             }
-        }
-        
     }
-
+    
+    func getDogImage(with url: String) {
+        let destination: DownloadRequest.Destination = { _, _ in
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,
+                                                                    .userDomainMask, true)[0]
+            let documentsURL = URL(fileURLWithPath: documentsPath, isDirectory: true)
+            let fileURL = documentsURL.appendingPathComponent("image.jpg")
+            
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories]) }
+        
+        
+        
+        AF.download(url, to: destination).downloadProgress { progress in
+                print("Download Progress: \(progress.fractionCompleted)")
+            }
+            .response { response in
+                debugPrint(response)
+                if response.error == nil, let imagePath = response.fileURL?.path {
+                    let dogImage = UIImage(contentsOfFile: imagePath)
+                    
+                    //download and show on UIImageView
+                    DispatchQueue.main.async {
+                        self.imageView.image =  dogImage
+                    }
+                    UIImageWriteToSavedPhotosAlbum(dogImage!, nil, nil, nil)
+                    
+                    
+                }
+            }
+    }
 }
 
 //MARK: - UICollectionView
@@ -78,6 +107,8 @@ extension ViewController: UICollectionViewDataSource,
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        //cell.contentView.addSubview(imageView)
         return cell
     }
     

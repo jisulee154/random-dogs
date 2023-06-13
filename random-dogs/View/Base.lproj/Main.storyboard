@@ -60,6 +60,9 @@
                             <constraint firstItem="g7k-UG-rRi" firstAttribute="centerX" secondItem="L61-um-Eau" secondAttribute="centerX" id="wtf-Vs-1Jf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="g7k-UG-rRi" id="kV0-4A-QB4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNx-Wa-zUa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
