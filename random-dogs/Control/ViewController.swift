@@ -10,7 +10,9 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     private var apiKey: String {
         get {
             guard let filepath = Bundle.main.path(forResource: "Keys", ofType: "plist") else {
@@ -24,10 +26,15 @@ class ViewController: UIViewController {
             return value
         }
     }
-    @IBOutlet weak var imageView: UIImageView!
+    
+    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    var collectedDogImages = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
         self.getADog()
     }
@@ -79,15 +86,20 @@ class ViewController: UIViewController {
             .response { response in
                 debugPrint(response)
                 if response.error == nil, let imagePath = response.fileURL?.path {
-                    let dogImage = UIImage(contentsOfFile: imagePath)
-                    
-                    //download and show on UIImageView
-                    DispatchQueue.main.async {
-                        self.imageView.image =  dogImage
+                    if let dogImage = UIImage(contentsOfFile: imagePath) {
+                        
+                        //download and show on UIImageView
+                        DispatchQueue.main.async {
+                            self.imageView.image = dogImage
+                        }
+                        
+                        self.collectedDogImages.append(dogImage)
+                        let itemLocation = self.collectedDogImages.count - 1
+                        let indexPaths = IndexPath(item: itemLocation, section: 0)
+                        self.collectionView.insertItems(at: [indexPaths])
+                        
+                        UIImageWriteToSavedPhotosAlbum(dogImage, nil, nil, nil) //캐싱하는 것으로 바꿔야할듯
                     }
-                    UIImageWriteToSavedPhotosAlbum(dogImage!, nil, nil, nil)
-                    
-                    
                 }
             }
     }
@@ -100,15 +112,22 @@ extension ViewController: UICollectionViewDataSource,
 {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return collectedDogImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
-            return UICollectionViewCell()
-        }
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
+//            return UICollectionViewCell()
+//        }
+//
+//        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let imageData = collectedDogImages[indexPath.row]
+        let appendingView = UIView(frame: CGRect.init())
+        let appendingImageView = UIImageView(image: imageData)
+        appendingView.addSubview(appendingImageView)
         
-        //cell.contentView.addSubview(imageView)
+        cell.contentView.addSubview(appendingView)
         return cell
     }
     
