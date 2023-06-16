@@ -1,10 +1,6 @@
 # random-dogs
-Swift app using Alamofire and The-Dog-API. Showing a random dog picture whenever user wants.
+API Server로부터 강아지 사진을 받아와 마음에 드는 사진을 저장합니다.
 
-## 특징
+## Features
 - RESTful API 연동: The Dog API
-- Alamofire
-
-## 소개
-Alamofire를 활용해 RESTful API와 연동한 앱입니다. 
-The Dog API로 강아지 사진을 받아 사용자가 새로운 사진을 요청할 때 마다 보여줍니다.
+- CocoaPods: Alamofire, Tabman
