@@ -1,0 +1,6 @@
+framework module Pods_random_dogs_random_dogsUITests {
+  umbrella header "Pods-random-dogs-random-dogsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
