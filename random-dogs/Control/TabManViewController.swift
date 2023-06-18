@@ -48,7 +48,7 @@ extension TabManViewController: PageboyViewControllerDataSource, TMBarDataSource
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         let item = TMBarItem(title: "")
         if index == 0 {
-            item.title = "Main"
+            item.title = "Get a dog"
         } else if index == 1 {
             item.title = "Gallery"
         } else {

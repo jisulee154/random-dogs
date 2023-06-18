@@ -9,24 +9,23 @@ import Tabman
 import UIKit
 import Alamofire
 
-protocol InsertImageDelegate {
-    func insertImage(with image: UIImage)
-}
-
 class FirstTabViewController: TabmanViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func GetImagePressed(_ sender: UIButton) {
         getADog()
     }
     @IBAction func SaveImagePressed(_ sender: UIButton) {
+        print("==")
+        print("SaveImage Btn Pressed")
         if let safeImage = dogImage {
-            delegate?.insertImage(with: safeImage)
+            delegate?.sendImage(with: safeImage)
         } else {
             print("dogImage is nil")
         }
+        performSegue(withIdentifier: "firstToSecond", sender: self)
     }
     
-    var delegate: InsertImageDelegate?
+    var delegate: ImageDelegate?
     var dogImage: UIImage?
     private var apiKey: String {
         get {
@@ -47,7 +46,8 @@ class FirstTabViewController: TabmanViewController {
     }
 }
 
-extension FirstTabViewController {    func getADog(){
+extension FirstTabViewController {
+    func getADog(){
         let url = "https://api.thedogapi.com/v1/images/search"
         
         let headers = ["x-api-key" : apiKey]
@@ -86,8 +86,6 @@ extension FirstTabViewController {    func getADog(){
             
             return (fileURL, [.removePreviousFile, .createIntermediateDirectories]) }
         
-        
-        
         AF.download(url, to: destination).downloadProgress { progress in
                 print("Download Progress: \(progress.fractionCompleted)")
             }
@@ -99,7 +97,7 @@ extension FirstTabViewController {    func getADog(){
                         //download and show on UIImageView
                         DispatchQueue.main.async {
                             self.dogImage = tempImage
-                            self.imageView.image = tempImage
+                            self.imageView.image = self.dogImage
                         }
                         UIImageWriteToSavedPhotosAlbum(tempImage, nil, nil, nil) //캐싱하는 것으로 바꿔야할듯
                     }

@@ -12,6 +12,7 @@
 		41943DF02A3C68BB00B96E43 /* TabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */; };
 		41943DF22A3C68D100B96E43 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */; };
 		41943DF42A3C81CF00B96E43 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */; };
+		41943DF62A3ED95400B96E43 /* ImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DF52A3ED95400B96E43 /* ImageDelegate.swift */; };
 		419D8A992A221C7E00B087B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8A982A221C7E00B087B9 /* AppDelegate.swift */; };
 		419D8A9B2A221C7E00B087B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419D8A9A2A221C7E00B087B9 /* SceneDelegate.swift */; };
 		419D8AA02A221C7E00B087B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419D8A9E2A221C7E00B087B9 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManViewController.swift; sourceTree = "<group>"; };
 		41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
 		41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		41943DF52A3ED95400B96E43 /* ImageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDelegate.swift; sourceTree = "<group>"; };
 		419D8A952A221C7E00B087B9 /* random-dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-dogs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		419D8A982A221C7E00B087B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		419D8A9A2A221C7E00B087B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */,
 				41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */,
 				41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */,
+				41943DF52A3ED95400B96E43 /* ImageDelegate.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				41943DF02A3C68BB00B96E43 /* TabManViewController.swift in Sources */,
 				41943DF22A3C68D100B96E43 /* FirstTabViewController.swift in Sources */,
 				41943DF42A3C81CF00B96E43 /* SecondTabViewController.swift in Sources */,
+				41943DF62A3ED95400B96E43 /* ImageDelegate.swift in Sources */,
 				41AED7E62A3064BD0047AAB5 /* DogDataArray.swift in Sources */,
 				419D8A9B2A221C7E00B087B9 /* SceneDelegate.swift in Sources */,
 				41B737452A222E1E0045AAD8 /* DogVO.swift in Sources */,
