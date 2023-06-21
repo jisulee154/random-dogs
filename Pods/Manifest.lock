@@ -3,22 +3,26 @@ PODS:
   - Pageboy (4.0.2)
   - Tabman (3.0.1):
     - Pageboy (~> 4.0.2)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Tabman (~> 3.0)
+  - Toast-Swift (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Pageboy
     - Tabman
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
   Tabman: a5880789298f81d3f2cdd6510b54ae637cfd8e09
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: b67aabcc414dc9e0135997b670c6a672d6929362
+PODFILE CHECKSUM: 77948b14b5644469c3ba1c1cb9161491e324d49c
 
 COCOAPODS: 1.12.1
