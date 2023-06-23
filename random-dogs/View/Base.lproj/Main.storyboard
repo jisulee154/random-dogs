@@ -212,7 +212,6 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="bBo-un-eDV" id="ZY8-PY-sCT"/>
-                        <segue destination="sYp-Vi-QdB" kind="show" identifier="firstToSecond" id="0w7-0c-VN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8Z-0O-UXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,7 +223,7 @@
             <objects>
                 <viewController storyboardIdentifier="SecondTabVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sYp-Vi-QdB" customClass="SecondTabViewController" customModule="random_dogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GRN-Qi-pAX">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-oT-OpS">
@@ -248,28 +247,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-7X-R4S">
-                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yvB-NL-SoK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lZQ-oT-OpS" firstAttribute="top" secondItem="yvB-NL-SoK" secondAttribute="top" id="FQN-Or-qkH"/>
                             <constraint firstItem="yvB-NL-SoK" firstAttribute="bottom" secondItem="lZQ-oT-OpS" secondAttribute="bottom" id="NjH-Ik-9qk"/>
-                            <constraint firstItem="9tF-7X-R4S" firstAttribute="top" secondItem="yvB-NL-SoK" secondAttribute="top" id="OuF-YY-MbV"/>
                             <constraint firstItem="lZQ-oT-OpS" firstAttribute="leading" secondItem="yvB-NL-SoK" secondAttribute="leading" id="fXK-0e-Mfx"/>
                             <constraint firstItem="yvB-NL-SoK" firstAttribute="trailing" secondItem="lZQ-oT-OpS" secondAttribute="trailing" id="kbV-Wx-uWg"/>
-                            <constraint firstItem="9tF-7X-R4S" firstAttribute="leading" secondItem="yvB-NL-SoK" secondAttribute="leading" id="pLd-9p-Spz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pJU-M7-qsf"/>
                     <connections>
                         <outlet property="collectionView" destination="lZQ-oT-OpS" id="NQt-QF-CI6"/>
-                        <outlet property="testLabel" destination="9tF-7X-R4S" id="mj4-Vo-Hp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q47-HA-1Jj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

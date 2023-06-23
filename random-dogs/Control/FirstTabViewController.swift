@@ -10,23 +10,24 @@ import UIKit
 import Alamofire
 
 class FirstTabViewController: TabmanViewController {
+    var dogImage: UIImage?
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func GetImagePressed(_ sender: UIButton) {
         getADog()
     }
-    @IBAction func SaveImagePressed(_ sender: UIButton) {
-        print("==")
-        print("SaveImage Btn Pressed")
-        if let safeImage = dogImage {
-            delegate?.sendImage(with: safeImage)
-        } else {
-            print("dogImage is nil")
-        }
-        performSegue(withIdentifier: "firstToSecond", sender: self)
-    }
     
-    var delegate: ImageDelegate?
-    var dogImage: UIImage?
+    @IBAction func SaveImagePressed(_ sender: UIButton) {
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
+        if let safeImage = dogImage {
+            ad?.collectedImages.append(safeImage)
+            
+            if let safeCount = ad?.collectedImages.count {
+                print("After Append cell count = \(safeCount)")
+            }
+        }
+    }
     private var apiKey: String {
         get {
             guard let filepath = Bundle.main.path(forResource: "Keys", ofType: "plist") else {
@@ -43,6 +44,7 @@ class FirstTabViewController: TabmanViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 }
 
