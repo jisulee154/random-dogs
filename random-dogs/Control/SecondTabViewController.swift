@@ -10,25 +10,20 @@ import Tabman
 
 class SecondTabViewController: TabmanViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var testLabel: UILabel!
-    
-    var collectedDogImages = [UIImage]()
-    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
-//        guard let firstTabVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstTabVC") as? FirstTabViewController
-//        else { return }
-//        firstTabVC.delegate = self
+        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "firstToSecond" {
-            let firstTabVC: FirstTabViewController = segue.destination as! FirstTabViewController
-            firstTabVC.delegate = self
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        collectionView.reloadData()
     }
 }
 
@@ -38,36 +33,36 @@ extension SecondTabViewController: UICollectionViewDataSource,
                                    UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectedDogImages.count
-//        return 10
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
+        if let count = ad?.collectedImages.count {
+            print("cell count = \(count)")
+            return count
+        } else {
+            return 1
+        }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-//        let imageData = collectedDogImages[indexPath.row]
-//        let appendingView = UIView(frame: CGRect.init())
-//        let appendingImageView = UIImageView(image: imageData)
-//        appendingView.addSubview(appendingImageView)
-//
-//        cell.contentView.addSubview(appendingView)
-//        return cell
-//    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as? CustomCollectionViewCell {
+            
+            if let imageInfo = ad?.collectedImages[indexPath.row] {
+                cell.cellImageView.image = imageInfo.imageData
+                cell.cellImageView.contentMode = UIImageView.ContentMode.scaleAspectFill
+            }
+            return cell
+        }
         else {
             return UICollectionViewCell()
         }
-        let imageData = collectedDogImages[indexPath.row - 1
-        ]
-        let appendingView = UIView(frame: CGRect.init())
-        let appendingImageView = UIImageView(image: imageData)
-        appendingView.addSubview(appendingImageView)
-
-        cell.contentView.addSubview(appendingView)
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
         let width = collectionView.frame.width
         let height = collectionView.frame.height
         let itemsPerRow: CGFloat = 2
@@ -78,21 +73,5 @@ extension SecondTabViewController: UICollectionViewDataSource,
         let cellHeight = (height - heightPadding) / itemsPerColumn
         
         return CGSize(width: cellWidth, height: cellHeight)
-    }
-    
-}
-
-//MARK: - InsertImageDelegate
-extension SecondTabViewController: ImageDelegate {
-    func sendImage(with image: UIImage) {
-        print("=")
-        print("secondTab delegate method activated")
-        self.collectedDogImages.append(image)
-        let itemLocation = self.collectedDogImages.count
-        let indexPaths = IndexPath(item: itemLocation, section: 0)
-        //test
-        testLabel.text = "passed"
-        
-        self.collectionView.insertItems(at: [indexPaths])
     }
 }

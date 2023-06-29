@@ -54,7 +54,7 @@ extension TabManViewController: PageboyViewControllerDataSource, TMBarDataSource
         } else {
             item.title = "Page \(index+1)"
         }
-        item.image = UIImage(named: "image.png") // ??
+        item.image = UIImage(named: "image.png")
         
         return item
     }
