@@ -10,6 +10,8 @@
 		03325D5F7CCC4A5C2D2613CF /* Pods_random_dogs_random_dogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D2622D03DB6FA1CCCDE6F7 /* Pods_random_dogs_random_dogsUITests.framework */; };
 		1D5374EA9AEF39035043E0EA /* Pods_random_dogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553C8B43A5BA2AC2FD51D16 /* Pods_random_dogsTests.framework */; };
 		413107FF2A4404D60021D7B5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 413107FE2A4404D60021D7B5 /* Keys.plist */; };
+		4162D8DB2A4CDF4700C96743 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162D8D92A4CDF4700C96743 /* CustomCollectionViewCell.swift */; };
+		4162D8DC2A4CDF4700C96743 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4162D8DA2A4CDF4700C96743 /* CustomCollectionViewCell.xib */; };
 		41943DF02A3C68BB00B96E43 /* TabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */; };
 		41943DF22A3C68D100B96E43 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */; };
 		41943DF42A3C81CF00B96E43 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */; };
@@ -49,11 +51,13 @@
 /* Begin PBXFileReference section */
 		34FABAAAEC2FDB4E87080A2B /* Pods-random-dogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-random-dogs.release.xcconfig"; path = "Target Support Files/Pods-random-dogs/Pods-random-dogs.release.xcconfig"; sourceTree = "<group>"; };
 		413107FE2A4404D60021D7B5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		4162D8D92A4CDF4700C96743 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		4162D8DA2A4CDF4700C96743 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManViewController.swift; sourceTree = "<group>"; };
 		41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
 		41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		419D8A952A221C7E00B087B9 /* random-dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "random-dogs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		419D8A982A221C7E00B087B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		419D8A982A221C7E00B087B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "/Users/ijisu/Documents/iOS/random-dogs/random-dogs/AppDelegate.swift"; sourceTree = "<absolute>"; };
 		419D8A9A2A221C7E00B087B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		419D8A9F2A221C7E00B087B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		419D8AA12A221C7E00B087B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		41AED7E32A3064640047AAB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4162D8DA2A4CDF4700C96743 /* CustomCollectionViewCell.xib */,
 				419D8A9E2A221C7E00B087B9 /* Main.storyboard */,
 			);
 			path = View;
@@ -186,6 +191,7 @@
 				41943DEF2A3C68BB00B96E43 /* TabManViewController.swift */,
 				41943DF12A3C68D100B96E43 /* FirstTabViewController.swift */,
 				41943DF32A3C81CF00B96E43 /* SecondTabViewController.swift */,
+				4162D8D92A4CDF4700C96743 /* CustomCollectionViewCell.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				413107FF2A4404D60021D7B5 /* Keys.plist in Resources */,
 				41B7374D2A22349C0045AAD8 /* 3.jpg in Resources */,
 				41B7374C2A22349C0045AAD8 /* 1.jpg in Resources */,
+				4162D8DC2A4CDF4700C96743 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419D8A992A221C7E00B087B9 /* AppDelegate.swift in Sources */,
+				4162D8DB2A4CDF4700C96743 /* CustomCollectionViewCell.swift in Sources */,
 				41943DF02A3C68BB00B96E43 /* TabManViewController.swift in Sources */,
 				41943DF22A3C68D100B96E43 /* FirstTabViewController.swift in Sources */,
 				41943DF42A3C81CF00B96E43 /* SecondTabViewController.swift in Sources */,

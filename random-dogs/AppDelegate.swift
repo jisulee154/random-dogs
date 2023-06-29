@@ -10,7 +10,9 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - Saving View Controller Instance
-    var collectedImages: [UIImage] = [UIImage]()
+    //var collectedImages: [UIImage] = [UIImage]()
+    //MARK: - Test
+    var collectedImages: [ImageInfo] = [ImageInfo]()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

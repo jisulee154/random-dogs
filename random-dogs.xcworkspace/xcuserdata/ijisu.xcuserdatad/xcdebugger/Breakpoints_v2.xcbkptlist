@@ -7,241 +7,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F46904E-E96E-4209-91B4-7806C74D7040"
+            uuid = "5AD8987A-23F1-4416-810E-8636EF13DA8B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "random-dogs/Control/FirstTabViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "getDogImage(with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1F46904E-E96E-4209-91B4-7806C74D7040 - 9f17718691160dc3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #3 (Alamofire.DownloadResponse&lt;Swift.Optional&lt;Foundation.URL&gt;, Alamofire.AFError&gt;) -&gt; () in random_dogs.FirstTabViewController.getDogImage(with: Swift.String) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "1F46904E-E96E-4209-91B4-7806C74D7040 - 9f17718691160dc3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #3 (Alamofire.DownloadResponse&lt;Swift.Optional&lt;Foundation.URL&gt;, Alamofire.AFError&gt;) -&gt; () in random_dogs.FirstTabViewController.getDogImage(with: Swift.String) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "140">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68DD89B9-6724-4CA7-807E-FFF001F61555"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "random-dogs/Control/FirstTabViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "getDogImage(with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "68DD89B9-6724-4CA7-807E-FFF001F61555 - 9f17718691160c20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #3 (Alamofire.DownloadResponse&lt;Swift.Optional&lt;Foundation.URL&gt;, Alamofire.AFError&gt;) -&gt; () in random_dogs.FirstTabViewController.getDogImage(with: Swift.String) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "68DD89B9-6724-4CA7-807E-FFF001F61555 - 9f17718691160c20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #3 (Alamofire.DownloadResponse&lt;Swift.Optional&lt;Foundation.URL&gt;, Alamofire.AFError&gt;) -&gt; () in random_dogs.FirstTabViewController.getDogImage(with: Swift.String) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DE7BAA45-C6CE-4334-B1BF-9D3EF2EE07CF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "random-dogs/Control/SecondTabViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "random-dogs/Control/FirstTabViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "SaveImagePressed(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342 - 2f547807007abfe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.FirstTabViewController.SaveImagePressed(__C.UIButton) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "684">
-               </Location>
-               <Location
-                  uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342 - 2f547807007abfe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.FirstTabViewController.SaveImagePressed(__C.UIButton) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342 - 2f547807007abfe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.FirstTabViewController.SaveImagePressed(__C.UIButton) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "852">
-               </Location>
-               <Location
-                  uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342 - 2f547807007abfe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.FirstTabViewController.SaveImagePressed(__C.UIButton) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "556">
-               </Location>
-               <Location
-                  uuid = "518A77FD-E990-4E46-AA15-BD45ED0DD342 - 2f547807007abfe1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.FirstTabViewController.SaveImagePressed(__C.UIButton) -&gt; ()"
-                  moduleName = "random-dogs"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/FirstTabViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "728">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD7BC453-4BAA-4824-B45A-30871B88265E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "random-dogs/Control/SecondTabViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F8C8DAF4-D1DC-477A-8EB2-5683E588F9A7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "random-dogs/Control/SecondTabViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F8C8DAF4-D1DC-477A-8EB2-5683E588F9A7 - 4bf9d1c40cd9edaa"
+                  uuid = "5AD8987A-23F1-4416-810E-8636EF13DA8B - 4bf9d1c40cd9ee74"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -251,24 +30,24 @@
                   urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/SecondTabViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "584">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1620">
                </Location>
                <Location
-                  uuid = "F8C8DAF4-D1DC-477A-8EB2-5683E588F9A7 - 4bf9d1c40cd9edaa"
+                  uuid = "5AD8987A-23F1-4416-810E-8636EF13DA8B - b4d4cee8ee7831f8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "random_dogs.SecondTabViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in random_dogs.SecondTabViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
                   moduleName = "random-dogs"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ijisu/Documents/iOS/random-dogs/random-dogs/Control/SecondTabViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "884">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "96">
                </Location>
             </Locations>
          </BreakpointContent>

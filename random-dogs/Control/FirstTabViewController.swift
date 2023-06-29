@@ -9,8 +9,19 @@ import Tabman
 import UIKit
 import Alamofire
 
+struct ImageInfo: Hashable {
+    var imageData: UIImage
+    var imagePath: String
+    
+    init(data: UIImage, path: String){
+        imageData = data
+        imagePath = path
+    }
+}
+
 class FirstTabViewController: TabmanViewController {
     var dogImage: UIImage?
+    var tempImagePath: String?
     
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func GetImagePressed(_ sender: UIButton) {
@@ -20,8 +31,11 @@ class FirstTabViewController: TabmanViewController {
     @IBAction func SaveImagePressed(_ sender: UIButton) {
         let ad = UIApplication.shared.delegate as? AppDelegate
         
-        if let safeImage = dogImage {
-            ad?.collectedImages.append(safeImage)
+        if let safeImage = dogImage
+          ,let safePath = tempImagePath
+        {
+            let tempImageInfo = ImageInfo(data: safeImage, path: safePath)
+            ad?.collectedImages.append(tempImageInfo)
             
             if let safeCount = ad?.collectedImages.count {
                 print("After Append cell count = \(safeCount)")
@@ -44,7 +58,6 @@ class FirstTabViewController: TabmanViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
@@ -94,6 +107,7 @@ extension FirstTabViewController {
             .response { response in
                 debugPrint(response)
                 if response.error == nil, let imagePath = response.fileURL?.path {
+                    self.tempImagePath = imagePath
                     if let tempImage = UIImage(contentsOfFile: imagePath) {
                         
                         //download and show on UIImageView
@@ -101,7 +115,7 @@ extension FirstTabViewController {
                             self.dogImage = tempImage
                             self.imageView.image = self.dogImage
                         }
-                        UIImageWriteToSavedPhotosAlbum(tempImage, nil, nil, nil) //캐싱하는 것으로 바꿔야할듯
+                        //UIImageWriteToSavedPhotosAlbum(tempImage, nil, nil, nil) //캐싱하는 것으로 바꿔야할듯
                     }
                 }
             }
